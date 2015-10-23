@@ -69,15 +69,13 @@ angular.module('planning')
       email.setSubject(subject)
       email.setSender(config.senderEmail, config.senderName)
       email.setHTML(generateMsgBody(round.roundCode))
-      // TODO: once you confirm list of recipient, move to a central location DB or attach to delivery round.
-
       return scheduleService.getAlertReceiversForRound(round)
         .then(function (result) {
           email.addRecipients(result.emails)
-          return email
-        })
-        .then(function (email) {
           return mailerService.send(email)
+        })
+        .catch(function (err) {
+          return log.error('notificationError', err)
         })
     }
 
