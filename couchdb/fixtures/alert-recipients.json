@@ -1,0 +1,15 @@
+{
+  "_id": "7ab9f02f1d61f74666517af7aa001d94",
+  "active": true,
+  "doc_type": "alert-reciever",
+  "phones": [
+    "0801234567890",
+    "0909876543210"
+  ],
+  "emails": [
+    "email_1@example.com",
+    "email_2@example.com"
+  ],
+  "locations": ["KN"],
+  "name": "Recipient Name"
+}
