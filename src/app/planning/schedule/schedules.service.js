@@ -24,8 +24,6 @@ angular.module('planning')
             })
             return previous
           }, obj)
-        }).catch(function (err) {
-          return log.error('notificationError', err)
         })
     }
 
